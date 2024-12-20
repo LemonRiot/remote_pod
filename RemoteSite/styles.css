@@ -1,0 +1,115 @@
+/* Global Styles */
+:root {
+  --primary-dark: #121212;
+  --accent-color: #9147ff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navigation */
+.navbar {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('assets/remotecoverart.PNG') center/cover no-repeat;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+/* Social Ribbon */
+.social-icon {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent-color);
+}
+
+/* About Section */
+.about-image {
+  height: 400px;
+  background: url('about-bg.jpg') center/cover no-repeat;
+  border-radius: 10px;
+}
+
+/* Episodes Section */
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: var(--primary-dark);
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Resources Section */
+.card-title i {
+  color: var(--accent-color);
+}
+
+/* Buttons */
+.btn-outline-light:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero, .about-image, .card {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Full viewport sections */
+section {
+    min-height: 100vh;
+    padding-top: 76px; /* accounts for fixed navbar height */
+    display: flex;
+    align-items: center;
+}
+
+/* Keep the social ribbon at its normal height */
+.social-ribbon {
+    min-height: auto;
+}
